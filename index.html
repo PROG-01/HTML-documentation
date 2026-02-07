@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+    <head> 
+        <title>HTML Elements Reference</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+
+        <header>
+            <h1>HTML Elements Reference</h1>
+            <nav id="navbar">
+                <ul>
+                    <li><a class="nav-link" href="#introduction">Introduction</a></li>
+                    <li><a class="nav-link" href="#text_elements">Text Elements</a></li>
+                    <li><a class="nav-link" href="#lists">Lists</a></li>
+                    <li><a class="nav-link" href="#links_and_images">Links and Images</a></li>
+                    <li><a class="nav-link" href="#forms">Forms</a></li>
+                    <li><a class="nav-link" href="#tables">Tables</a></li>
+                    <li><a class="nav-link" href="#semantic_tags">Semantic Tags</a></li>
+                    <li><a class="nav-link" href="#multimedia_elements">Multimedia Elements</a></li>
+                    <li><a class="nav-link" href="#html_document_structure">HTML Document Structure</a></li>
+                </ul>
+          </nav>
+        </header>
+
+        <div id="main-doc">
+            <section class="main-section" id="introduction">
+                <h2>Introduction</h2>
+                    <p>HTML (HyperText Markup Language) is the standard language used to create and structure content on the web. It consists of elements that tell browsers how to display text, images, links, and other types of content. This documentation provides a reference for many commonly used HTML elements. Each section includes a description of the element, its purpose, and example code.</p>
+            </section>
+
+            <section class="main-section" id="text_elements">
+                <h3>Text Elements</h3>
+                    <p>HTML provides a variety of text elements that define the structure and emphasis of content. These elements help browsers, screen readers, and search engines understand the meaning and importance of different parts of the text.</p>
+
+                <h3>Headings</h3>
+                    <p>Headings are defined using tags from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>, where <code>&lt;h1&gt;</code> is the highest (most important) level and <code>&lt;h6&gt;</code> is the lowest. They should be used in a logical, hierarchical order.</p>
+
+                <pre>
+                    <code>
+                        &lt;h1&gt;Main Title&lt;/h1&gt;
+                        &lt;h2&gt;Section Heading&lt;/h2&gt;
+                        &lt;h3&gt;Subsection Heading&lt;/h3&gt;
+                    </code>
+                 </pre>
+
+                <h3>Paragraphs</h3>
+
+                    <p>The <code>&lt;p&gt;</code> tag is used to define blocks of text as paragraphs. It adds spacing above and below the content by default.</p>
+                    <pre><code>&lt;p&gt;This is a paragraph of text.&lt;/p&gt;</code></pre>
+
+                <h3>Line Breaks</h3>
+
+                    <p>Use the <code>&lt;br&gt;</code> tag to insert a line break without starting a new paragraph. It’s an empty (self-closing) tag.</p>
+                    <pre><code>This is the first line.&lt;br&gt;This is the second line.</code></pre>
+
+  <h3>Text Emphasis</h3>
+
+  <p>HTML provides elements to emphasize or highlight the importance of certain text:</p>
+
+  <ul>
+    <li><code>&lt;strong&gt;</code> – indicates strong importance (usually bold)</li>
+    <li><code>&lt;em&gt;</code> – indicates emphasis (usually italic)</li>
+  </ul>
+
+  <pre><code>&lt;p&gt;This is &lt;strong&gt;very important&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This word is &lt;em&gt;emphasized&lt;/em&gt;.&lt;/p&gt;</code></pre>
+    </section>
+
+    <section class="main-section" id="lists">
+<header>
+  <h2>Lists</h2>
+</header>
+
+<p>HTML provides elements for creating both unordered (bulleted) and ordered (numbered) lists. Lists help organize related items and improve content readability.</p>
+
+  <h3>Unordered Lists</h3>
+
+  <p>An unordered list is created using the <code>&lt;ul&gt;</code> element. Each list item is defined with <code>&lt;li&gt;</code>. By default, browsers display bullets for unordered list items</p>
+
+  <pre><code>&lt;ul&gt;
+  &lt;li&gt;Apples&lt;/li&gt;
+  &lt;li&gt;Bananas&lt;/li&gt;
+  &lt;li&gt;Cherries&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+  <h3>Ordered Lists</h3>
+
+  <p>An ordered list is created using the <code>&lt;ol&gt;</code> element, with each list item again using <code>&lt;li&gt;</code>. Items are numbered automatically.</p>
+
+  <pre><code>&lt;ol&gt;
+  &lt;li&gt;Wake up&lt;/li&gt;
+  &lt;li&gt;Brush teeth&lt;/li&gt;
+  &lt;li&gt;Start coding&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+  <h3>Nested Lists</h3>
+
+  <p>Lists can be nested inside each other to create multi-level structures. This is useful for representing subcategories or hierarchies.</p>
+
+  <h3>Real List Example</h3>
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+  <li>React</li>
+  <li>Vue</li>
+</ul>
+
+  <pre><code>&lt;ul&gt;
+  &lt;li&gt;Fruits
+    &lt;ul&gt;
+      &lt;li&gt;Apples&lt;/li&gt;
+      &lt;li&gt;Oranges&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Vegetables&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </section>
+
+    <section class="main-section" id="links_and_images"> 
+      <header>
+        <h2>Links and Images</h2>
+      </header>
+
+      <p>HTML allows you to link to other web pages or resources using the anchor tag, and to embed images using the image tag. These elements are essential for building rich, interactive websites.</p>
+
+  <h3>Anchor Tag (Links)</h3>
+
+  <p>The <code>&lt;a&gt;</code> (anchor) element creates a hyperlink. The <code>href</code> attribute specifies the URL the link goes to. You can also use the <code>target</code> attribute to open links in a new tab.</p>
+
+  <pre><code>&lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;</code></pre>
+
+<p>Open in a new tab:</p>
+
+  <pre><code>&lt;a href="https://www.example.com" target="_blank"&gt;Visit Example&lt;/a&gt;</code></pre>
+
+  <h3>Image Tag</h3>
+
+  <p>The <code>&lt;img&gt;</code> tag embeds images into the page. It requires a <code>src</code> attribute (the image URL or path) and should always include an <code>alt</code> attribute for accessibility and SEO.</p>
+
+  <pre><code>&lt;img src="logo.png" alt="Company logo"&gt;</code></pre>
+
+  <h3>Clickable Images</h3>
+
+  <p>You can wrap an image in an anchor tag to make it clickable, turning it into a link.</p>
+
+  <pre><code>&lt;a href="https://example.com"&gt;
+  &lt;img src="logo.png" alt="Example logo"&gt;
+&lt;/a&gt;</code></pre>
+    </section>
+
+    <section class="main-section" id="forms">
+      <header>
+        <h2>Forms</h2>
+      </header>
+
+      <p>Forms in HTML are used to gather input from users. They consist of form elements like text fields, checkboxes, radio buttons, dropdowns, and buttons. Data entered into a form can be sent to a server for processing.</p>
+
+  <h3>Basic Form Structure</h3>
+
+  <p>The <code>&lt;form&gt;</code> element wraps all form controls. Use the <code>action</code> attribute to specify where the form data should go, and <code>method</code> (usually <code>GET</code> or <code>POST</code>) to define how it’s sent.</p>
+
+  <pre><code>&lt;form action="/submit" method="post"&gt;
+  &lt;!-- Form inputs go here --&gt;
+&lt;/form&gt;</code></pre>
+
+  <h3>Input Fields</h3>
+
+  <p>Use the <code>&lt;input&gt;</code> element to create different types of user inputs such as text fields, emails, and passwords.</p>
+
+  <pre><code>&lt;label&gt;
+  Name: &lt;input type="text" name="username"&gt;
+&lt;/label&gt;
+
+&lt;label&gt;
+  Email: &lt;input type="email" name="email"&gt;
+&lt;/label&gt;</code></pre>
+
+  <h3>Textarea</h3>
+
+  <p>The <code>&lt;textarea&gt;</code> tag is used for multi-line text input.</p>
+
+  <pre><code>&lt;label&gt;
+  Message:
+  &lt;textarea name="message"&gt;&lt;/textarea&gt;
+&lt;/label&gt;</code></pre>
+
+  <h3>Radio Buttons and Checkboxes</h3>
+
+  <p>Use <code>type="radio"</code> for single-choice options and <code>type="checkbox"</code> for multiple-choice</p>
+
+  <pre><code>&lt;p&gt;Choose a language:&lt;/p&gt;
+&lt;label&gt;&lt;input type="radio" name="language" value="html"&gt; HTML&lt;/label&gt;
+&lt;label&gt;&lt;input type="radio" name="language" value="css"&gt; CSS&lt;/label&gt;
+
+&lt;p&gt;Select your skills:&lt;/p&gt;
+&lt;label&gt;&lt;input type="checkbox" name="skill" value="javascript"&gt; JavaScript&lt;/label&gt;
+&lt;label&gt;&lt;input type="checkbox" name="skill" value="python"&gt; Python&lt;/label&gt;</code></pre>
+
+  <h3>Submit Button</h3>
+
+  <p>The <code>&lt;button&gt;</code> or <code>&lt;input type="submit"&gt;</code> triggers form submission.</p>
+
+  <pre><code>&lt;button type="submit"&gt;Send&lt;/button&gt;</code></pre>
+    </section>
+
+    <section class="main-section" id="tables">
+<header>
+  <h2>Tables</h2>
+</header>
+<p>Tables are used to display tabular data — information in rows and columns.</p>
+
+  <h3>Basic Table Structure</h3>
+  <p>Here's an example of a simple table:</p>
+
+  <pre><code>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Element&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;table&gt;&lt;/td&gt;
+      &lt;td&gt;Defines a table&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;tr&gt;&lt;/td&gt;
+      &lt;td&gt;Defines a row&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;td&gt;&lt;/td&gt;
+      &lt;td&gt;Defines a cell&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+  <p>Rendered result:</p>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Element</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&lt;table&gt;</td>
+        <td>Defines a table</td>
+      </tr>
+      <tr>
+        <td>&lt;tr&gt;</td>
+        <td>Defines a row</td>
+      </tr>
+      <tr>
+        <td>&lt;td&gt;</td>
+        <td>Defines a table cell</td>
+      </tr>
+    </tbody>
+  </table>
+    </section>
+
+    <section class="main-section" id="semantic_tags">
+<header>
+  <h2>Semantic Tags</h2>
+</header>
+<p>Semantic HTML tags clearly describe their meaning in a way that is understandable to both developers and browsers. They improve accessibility and search engine optimization (SEO).</p>
+
+  <h3>Common Semantic Elements</h3>
+  <ul>
+    <li><code>&lt;header&gt;</code> – Represents introductory content, often including a logo or navigation.</li>
+    <li><code>&lt;nav&gt;</code> – Defines a block of navigation links.</li>
+    <li><code>&lt;main&gt;</code> – The central content of a page.</li>
+    <li><code>&lt;section&gt;</code> – A generic section of related content, often with a heading.</li>
+    <li><code>&lt;article&gt;</code> – A self-contained piece of content, like a blog post or news item.</li>
+    <li><code>&lt;aside&gt;</code> – Sidebar content related to the main content.</li>
+    <li><code>&lt;footer&gt;</code> – Footer content for a section or page.</li>
+  </ul>
+
+  <h3>Example Usage</h3>
+  <pre><code>&lt;article&gt;
+  &lt;header&gt;
+    &lt;h2&gt;Semantic HTML&lt;/h2&gt;
+  &lt;/header&gt;
+  &lt;p&gt;This is a paragraph inside an article element.&lt;/p&gt;
+  &lt;footer&gt;Posted by Admin&lt;/footer&gt;
+&lt;/article&gt;</code></pre>
+    </section>
+
+    <section class="main-section" id="multimedia_elements">
+<header>
+  <h2>Multimedia Elements</h2>
+</header>
+<p>HTML supports multimedia content such as audio, video, and images. These elements enrich web pages and improve user experience.</p>
+
+  <h3>Image Element</h3>
+  <p>The <code>&lt;img&gt;</code> tag is used to embed images. Always use the <code>alt</code> attribute for accessibility.</p>
+  <pre><code>&lt;img src="cat.jpg" alt="A cute cat"&gt;</code></pre>
+
+  <h3>Audio Element</h3>
+  <p>The <code>&lt;audio&gt;</code> tag lets you embed sound content. Use the <code>controls</code> attribute to show audio controls.</p>
+  <pre><code>&lt;audio controls&gt;
+  &lt;source src="sound.mp3" type="audio/mpeg"&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;</code></pre>
+
+  <h3>Video Element</h3>
+  <p>The <code>&lt;video&gt;</code> tag is used to play video files. You can specify width, height, and add controls.</p>
+  <pre><code>&lt;video width="320" height="240" controls&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;</code></pre>
+    </section>
+
+<section class="main-section" id="HTML_document_structure">
+  <header>
+    <h2>HTML Document Structure</h2>
+  </header>
+
+  <p>A basic HTML document follows a standard structure that ensures it is interpreted correctly by browsers and other user agents.</p>
+
+  <h3>Basic Structure</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Page content goes here --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+  <h3>Key Parts Explained</h3>
+  <ul>
+    <li><strong><code>&lt;!DOCTYPE html&gt;</code></strong> – Declares the document type and version of HTML.</li>
+    <li><strong><code>&lt;html&gt;</code></strong> – Root element of the document.</li>
+    <li><strong><code>&lt;head&gt;</code></strong> – Contains meta-information, links, and the title of the page.</li>
+    <li><strong><code>&lt;meta&gt;</code></strong> – Provides metadata like character encoding and responsive settings.</li>
+    <li><strong><code>&lt;title&gt;</code></strong> – Sets the title of the web page shown in the browser tab.</li>
+    <li><strong><code>&lt;body&gt;</code></strong> – Holds the content that is displayed in the browser.</li>
+  </ul>
+</section>
+  </div>
+</body>
+</html>
