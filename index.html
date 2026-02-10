@@ -10,8 +10,7 @@
 
     <body>
 
-        <header>
-            <h1>HTML Elements Reference</h1>
+      <div class="header">
             <nav id="navbar">
                 <ul class="nav-list">
                     <li><a class="nav-link" href="#introduction">Introduction</a></li>
@@ -25,13 +24,15 @@
                     <li><a class="nav-link" href="#html_document_structure">HTML Document Structure</a></li>
                 </ul>
             </nav>
-        </header>
+      </div>
 
-        <div id="main-doc">
-            <section class="main-section" id="introduction">
+      <h1>HTML Elements Reference</h1>
+
+      <div id="main-doc" class="container">
+            <div class="main-section" id="introduction">
                 <h2>Introduction</h2>
                     <p>HTML (HyperText Markup Language) is the standard language used to create and structure content on the web. It consists of elements that tell browsers how to display text, images, links, and other types of content. This documentation provides a reference for many commonly used HTML elements. Each section includes a description of the element, its purpose, and example code.</p>
-            </section>
+            </div>
 
             <section class="main-section" id="text_elements">
                 <h2>Text Elements</h2>
@@ -163,11 +164,11 @@
 
                         <p>Open in a new tab:</p>
 
-                            <pre>
-                              <code>
-                                &lt;a href="https://www.example.com" target="_blank"&gt;Visit Example&lt;/a&gt;
-                              </code>
-                            </pre>
+                        <pre>
+                          <code>
+                            &lt;a href="https://www.example.com" target="_blank"&gt;Visit Example&lt;/a&gt;
+                          </code>
+                        </pre>
 
                     <h3>Image Tag</h3>
 
@@ -193,19 +194,19 @@
 
             <section class="main-section" id="forms">
       
-                <h2>Forms</h2>
+                <h3>Forms</h3>
                     <p>Forms in HTML are used to gather input from users. They consist of form elements like text fields, checkboxes, radio buttons, dropdowns, and buttons. Data entered into a form can be sent to a server for processing.</p>
 
                     <h3>Basic Form Structure</h3>
                         <p>The <code>&lt;form&gt;</code> element wraps all form controls. Use the <code>action</code> attribute to specify where the form data should go, and <code>method</code> (usually <code>GET</code> or <code>POST</code>) to define how it’s sent.</p>
 
-                        <pre>
-                          <code>
-                            &lt;form action="/submit" method="post"&gt;
-                            &lt;!-- Form inputs go here --&gt;
-                            &lt;/form&gt;
-                          </code>
-                       </pre>
+                            <pre>
+                              <code>
+                                &lt;form action="/submit" method="post"&gt;
+                                &lt;!-- Form inputs go here --&gt;
+                                &lt;/form&gt;
+                                  </code>
+                            </pre>
 
                     <h3>Input Fields</h3>
                         <p>Use the <code>&lt;input&gt;</code> element to create different types of user inputs such as text fields, emails, and passwords.</p>
@@ -376,7 +377,7 @@
                         </pre>
             </section>
 
-            <section class="main-section" id="HTML_document_structure">
+            <section class="main-section" id="html_document_structure">
  
                 <h2>HTML Document Structure</h2>
                 <p>A basic HTML document follows a standard structure that ensures it is interpreted correctly by browsers and other user agents.</p>
