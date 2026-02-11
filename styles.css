@@ -15,7 +15,8 @@ html {
 }
 
 body {
-    margin: 20px;
+    margin: 0;
+    overflow-x: hidden;
     background-color: #1d2a35;
     color: #ddd;
     font-family: Arial, sans-serif;
@@ -25,7 +26,7 @@ body {
     height: 50px;
     background-color: #059862;
     border-bottom: 5px solid #38444d;
-    padding: 20px 0;
+    padding-top: 5px;
 }
 
 .intro {
@@ -73,4 +74,64 @@ body {
  code {
     background-color: #059862;
     color: #fff;
+}
+
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  .container {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  pre {
+    font-size: 0.85rem;
+  }
+
+  table {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .container {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  pre {
+    font-size: 0.9rem;
+  }
 }
