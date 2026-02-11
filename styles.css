@@ -11,14 +11,62 @@ html {
 }
 
 body {
-    text-align: center;
-    margin: 0;
-    background-color: #fcd0d0;
+    margin: 20px;
+    background-color: #1d2a35;
+    color: #ddd;
+    font-family: Arial, sans-serif;
 }
 
 .header {
-    height: 100px;
-    background-color: #a0c4ff;
-    border-bottom: 5px solid #14213d;
-    padding-top: 10px;
+    height: 50px;
+    background-color: #059862;
+    border-bottom: 5px solid #38444d;
+    padding: 20px 0;
+}
+
+.intro {
+    border-bottom: 2px solid #38444d;
+}
+
+.text_elements {
+    border-bottom: 2px solid #38444d;
+}
+
+.nav-link {
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+.list_elements {
+    border-bottom: 2px solid #38444d;
+}
+
+.links_and_images-section{
+    border-bottom: 2px solid #38444d;
+}
+
+.forms-section{
+    border-bottom: 2px solid #38444d;
+}
+
+.tables-section {
+    border-bottom: 2px solid #38444d;
+}
+
+.semantic_tags-section {
+    border-bottom: 2px solid #38444d;
+}
+
+.multimedia_elements-section {
+    border-bottom: 2px solid #38444d;
+}
+
+.html_document_structure-section {
+    border-bottom: 2px solid #38444d;
+}
+
+ code {
+    background-color: #059862;
+    color: #fff;
 }
